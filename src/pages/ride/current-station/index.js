@@ -8,6 +8,9 @@ function CurrentStation() {
       if (e.stationId === state.currentStationId) {
         return e;
       }
+      else {
+        return null
+      }
     });
     if (e) {
       return `Current Station: ${e.stationName}`;
