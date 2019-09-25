@@ -5,6 +5,10 @@ actions as well.
 And this is online Link to show it as a live demo: https://swvl-challange.eslamfcih.now.sh/
 ![alt text](https://github.com/EslaM-M/swvl-challange/blob/master/captured.gif)
 
+## Notice
+
+i'm assuming the ride time is 3 minute, based on your selection [ontime, early, late] it will be +OR- .5 minute
+
 ## Additional Libraries
 
 1- React Testing Library<br>
