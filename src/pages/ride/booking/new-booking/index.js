@@ -24,6 +24,9 @@ function NewBooking({ show, closeModal }) {
         }
       });
     }
+    if (state.bookings.length == 12) {
+      closeModal();
+    }
   };
   return (
     <>

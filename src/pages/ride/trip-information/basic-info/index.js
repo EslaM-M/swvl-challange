@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./basic-info.module.css";
-import busImage from "../../../../assets/images/newbus.png";
+import busImage from "../../../../assets/images/bus.png";
 import driverImage from "../../../../assets/images/user1.jpg";
 import { FaMapPin } from "react-icons/fa";
 import { FaDollarSign } from "react-icons/fa";

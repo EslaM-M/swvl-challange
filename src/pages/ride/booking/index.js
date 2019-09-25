@@ -13,7 +13,7 @@ function Booking() {
   };
 
   const closeModal = () => {
-    setShowBookModal(false);
+      setShowBookModal(false);
   };
   const { state } = React.useContext(Store);
   const [showBookModal, setShowBookModal] = useState(false);
