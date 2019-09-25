@@ -1,5 +1,12 @@
 import React from "react";
-import { AddBooking, UpdateRouteDistance } from "./Actions";
+import {
+  AddBooking,
+  UpdateRouteDistance,
+  UpdateLocation,
+  StartTrip,
+  EndTrip,
+  UpdateFullDistance
+} from "./Actions";
 import { initialState } from "../assets/mocking/initialState";
 import { initialStateThree } from "../assets/mocking/initialStateThree";
 describe("User Actions", () => {
@@ -55,5 +62,42 @@ describe("User Actions", () => {
     expect(newState.route).toEqual(expect.arrayContaining(newState.route));
     expect(newState.captainLocation.lat).toEqual(newRoute[0].lat);
     expect(newState.captainLocation.lng).toEqual(newRoute[0].lng);
+  });
+
+  test("UpdateLocation Action change the captain location", () => {
+    const newState = UpdateLocation(initialState, {
+      lat: 30,
+      lng: 29
+    });
+    expect(newState.captainLocation.lat).toBe(30);
+    expect(newState.captainLocation.lng).toBe(29);
+  });
+
+  test("StartTrip Action change the Status of ride into IN_PROGRESS and the arrival status", () => {
+    const newState = StartTrip(initialState, {
+      arrivalStatus: "ontime"
+    });
+    expect(newState.tripStatus).toBe("IN_PROGRESS");
+    expect(newState.arrivalStatus).toBe("ontime");
+  });
+
+  test("EndTrip Action change the Status checked in member to Compeleted and trip status to FINISHED", () => {
+    const filteredBeforeEndTrip = initialStateThree.bookings.filter(e => {
+      if (e.status === "Checked In") {
+        return e;
+      }
+    });
+    const newState = EndTrip(initialStateThree, {});
+    const filteredAfterEndTrip = newState.bookings.filter(e => {
+      if (e.status === "Compeleted") {
+        return e;
+      }
+    });
+    expect(filteredBeforeEndTrip.length).toBe(filteredAfterEndTrip.length);
+  });
+
+  test("UpdateFullDistance Action change the full distance of the ride", () => {
+    const newState = UpdateFullDistance(initialState, 100);
+    expect(newState.fullDistance).toBe(100);
   });
 });

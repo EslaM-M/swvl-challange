@@ -79,21 +79,6 @@ export const LoadState = (state, payload) => {
   return newState;
 };
 
-export const UpdateTripInfo = (state, payload) => {
-  let newState = {
-    ...state,
-    route: payload.route.map(e => {
-      e.count = 0;
-      return e;
-    }),
-    startPoint: payload.startPoint,
-    tripStatus: "NOT_STARTED",
-    endPoint: payload.endPoint,
-    driver: payload.driver,
-    baseFare: payload.baseFare
-  };
-  return newState;
-};
 export const StartTrip = (state, payload) => {
   return {
     ...state,

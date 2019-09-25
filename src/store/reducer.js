@@ -7,8 +7,7 @@ import {
   UpdateFullDistance,
   LoadState,
   EndTrip,
-  RestTrip,
-  UpdateTripInfo
+  RestTrip
 } from "./Actions";
 export const initialState = {
   bookings: [],
@@ -50,8 +49,6 @@ export function reducer(state, action) {
       return UpdateLocation(state, action.payload);
     case "START_TRIP":
       return StartTrip(state, action.payload);
-    case "UPDATE_TRIP_INFO":
-      return UpdateTripInfo(state, action.payload);
     case "UPDATE_STATION":
       return UpdateStation(state, action.payload);
     case "UPDATE_FULL_DISTANCE":
