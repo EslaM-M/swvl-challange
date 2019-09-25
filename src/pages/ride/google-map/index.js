@@ -16,13 +16,17 @@ import {
 
 function GoogleMaps(props) {
   const { state, dispatch } = React.useContext(Store);
-  let velocity = 1000;
+
+  const calculateVelocity = React.useMemo(() => {
+    return state.fullDistance / (3 * 60);
+  }, [state.fullDistance]);
+  
   let interval = null;
   let currentProgress = 0;
 
   const getDistance = () => {
     const differentInTime = (new Date() - new Date(state.tripStartTime)) / 1000;
-    return differentInTime * velocity;
+    return differentInTime * calculateVelocity;
   };
 
   const moveObject = () => {

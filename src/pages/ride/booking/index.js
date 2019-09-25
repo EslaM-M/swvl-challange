@@ -18,9 +18,10 @@ function Booking() {
   const { state } = React.useContext(Store);
   const [showBookModal, setShowBookModal] = useState(false);
   const bookings = state.bookings;
-  const isBookingEmpty = () => {
+  const isBookingEmpty = React.useMemo(() => {
     return bookings.length === 0;
-  };
+  }, [bookings.length]);
+
   return (
     <>
       <Card heading="Bookings" action={showModal} actionName="New Book">
@@ -38,7 +39,7 @@ function Booking() {
           })}
         </div>
       </Card>
-      {isBookingEmpty() && (
+      {isBookingEmpty && (
         <div>
           <EmptyCard
             icon={<FaAddressBook />}
