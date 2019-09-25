@@ -16,7 +16,7 @@ import {
 
 function GoogleMaps(props) {
   const { state, dispatch } = React.useContext(Store);
-  let velocity = 500;
+  let velocity = 1000;
   let interval = null;
   let currentProgress = 0;
 

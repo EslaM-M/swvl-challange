@@ -1,9 +1,16 @@
 The Aim of this project to mock the ride tracking experience on a map based display giving all the
 information about the customers, captain, price and etc.. given that the user can perform some
-actions as well
+actions as well.
 
 And this is online Link to show it as a live demo: https://swvl-challange.eslamfcih.now.sh/
 
+
+## Additional Libraries
+
+1- React Testing Library
+2- React Chartjs-2
+3- React Google Maps
+4- React Bootstrap(Most popular and familiar with it)
 ## Available Scripts
 
 In the project directory, you can run:
