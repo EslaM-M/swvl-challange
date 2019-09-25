@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewBooking Component Component snapshot render correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body
+    class="modal-open"
+    style="padding-right: 0px;"
+  >
+    <div
+      aria-hidden="true"
+    />
+    <div
+      class="fade modal-backdrop show"
+    />
+    <div
+      aria-hidden="true"
+      aria-modal="true"
+      class="fade modal show"
+      role="dialog"
+      style="display: block;"
+      tabindex="-1"
+    >
+      <div
+        class="modal-dialog"
+        role="document"
+      >
+        <div
+          class="modal-content"
+        >
+          <div
+            class="modal-header"
+          >
+            <div
+              class="modal-title h4"
+            >
+              New Booking
+            </div>
+            <button
+              class="close"
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+              >
+                ×
+              </span>
+              <span
+                class="sr-only"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+          <div
+            class="modal-body"
+          >
+            <form
+              class=""
+            >
+              <div
+                class="form-group"
+              >
+                <label
+                  class="form-label"
+                  for="newBookingForm.pickupStation"
+                >
+                  Example select
+                </label>
+                <select
+                  class="form-control"
+                  data-testid="select-station"
+                  id="newBookingForm.pickupStation"
+                  name="pickupStation"
+                >
+                  <option
+                    value=""
+                  >
+                    Select Station
+                  </option>
+                  <option
+                    value="1"
+                  >
+                    station1
+                  </option>
+                  <option
+                    value="2"
+                  >
+                    station2
+                  </option>
+                  <option
+                    value="3"
+                  >
+                    station3
+                  </option>
+                  <option
+                    value="4"
+                  >
+                    station4
+                  </option>
+                  <option
+                    value="5"
+                  >
+                    station5
+                  </option>
+                  <option
+                    value="6"
+                  >
+                    station6
+                  </option>
+                  <option
+                    value="7"
+                  >
+                    station7
+                  </option>
+                  <option
+                    value="8"
+                  >
+                    station8
+                  </option>
+                  <option
+                    value="9"
+                  >
+                    station9
+                  </option>
+                  <option
+                    value="10"
+                  >
+                    station10
+                  </option>
+                </select>
+              </div>
+              <div
+                class="form-group row"
+              >
+                <legend
+                  class="form-label col-form-label col-sm-4"
+                >
+                  Payment Type
+                </legend>
+                <div
+                  class="col-sm-8"
+                >
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      class="form-check-input"
+                      data-testid="test-cash-value"
+                      name="paymentType"
+                      type="radio"
+                      value="cash"
+                    />
+                    <label
+                      class="form-check-label"
+                      title=""
+                      type="checkbox"
+                    >
+                      Cash
+                    </label>
+                  </div>
+                  <div
+                    class="form-check"
+                  >
+                    <input
+                      class="form-check-input"
+                      data-testid="test-credit-value"
+                      name="paymentType"
+                      type="radio"
+                      value="credit"
+                    />
+                    <label
+                      class="form-check-label"
+                      title=""
+                      type="checkbox"
+                    >
+                      Credit
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div
+            class="modal-footer"
+          >
+            <button
+              class="btn btn-secondary"
+              type="button"
+            >
+              Close
+            </button>
+            <button
+              class="btn btn-primary"
+              disabled=""
+              type="button"
+            >
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div
+    aria-hidden="true"
+  />,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

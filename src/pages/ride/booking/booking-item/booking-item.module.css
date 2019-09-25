@@ -1,0 +1,10 @@
+.avatar{
+    width: 60px;
+    border-radius: 50px;
+    height: 60px;
+}
+.userBooking{
+    display: flex;
+    align-items: center;    
+    width: 240px;
+}

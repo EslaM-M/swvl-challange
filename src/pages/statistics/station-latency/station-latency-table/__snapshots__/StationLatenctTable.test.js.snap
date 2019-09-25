@@ -1,0 +1,402 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StationLatencyTable Component Component snapshot render correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <table
+        class="table"
+      >
+        <thead>
+          <tr>
+            <th>
+              #
+            </th>
+            <th>
+              Name
+            </th>
+            <th>
+              Status
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              data-testid="station-id"
+            >
+              1
+            </td>
+            <td
+              data-testid="station-name"
+            >
+              station1
+            </td>
+            <td
+              data-testid="arrival-status"
+            />
+          </tr>
+          <tr>
+            <td
+              data-testid="station-id"
+            >
+              2
+            </td>
+            <td
+              data-testid="station-name"
+            >
+              station2
+            </td>
+            <td
+              data-testid="arrival-status"
+            />
+          </tr>
+          <tr>
+            <td
+              data-testid="station-id"
+            >
+              3
+            </td>
+            <td
+              data-testid="station-name"
+            >
+              station3
+            </td>
+            <td
+              data-testid="arrival-status"
+            />
+          </tr>
+          <tr>
+            <td
+              data-testid="station-id"
+            >
+              4
+            </td>
+            <td
+              data-testid="station-name"
+            >
+              station4
+            </td>
+            <td
+              data-testid="arrival-status"
+            />
+          </tr>
+          <tr>
+            <td
+              data-testid="station-id"
+            >
+              5
+            </td>
+            <td
+              data-testid="station-name"
+            >
+              station5
+            </td>
+            <td
+              data-testid="arrival-status"
+            />
+          </tr>
+          <tr>
+            <td
+              data-testid="station-id"
+            >
+              6
+            </td>
+            <td
+              data-testid="station-name"
+            >
+              station6
+            </td>
+            <td
+              data-testid="arrival-status"
+            />
+          </tr>
+          <tr>
+            <td
+              data-testid="station-id"
+            >
+              7
+            </td>
+            <td
+              data-testid="station-name"
+            >
+              station7
+            </td>
+            <td
+              data-testid="arrival-status"
+            />
+          </tr>
+          <tr>
+            <td
+              data-testid="station-id"
+            >
+              8
+            </td>
+            <td
+              data-testid="station-name"
+            >
+              station8
+            </td>
+            <td
+              data-testid="arrival-status"
+            />
+          </tr>
+          <tr>
+            <td
+              data-testid="station-id"
+            >
+              9
+            </td>
+            <td
+              data-testid="station-name"
+            >
+              station9
+            </td>
+            <td
+              data-testid="arrival-status"
+            />
+          </tr>
+          <tr>
+            <td
+              data-testid="station-id"
+            >
+              10
+            </td>
+            <td
+              data-testid="station-name"
+            >
+              station10
+            </td>
+            <td
+              data-testid="arrival-status"
+            />
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>,
+  "container": <div>
+    <table
+      class="table"
+    >
+      <thead>
+        <tr>
+          <th>
+            #
+          </th>
+          <th>
+            Name
+          </th>
+          <th>
+            Status
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            data-testid="station-id"
+          >
+            1
+          </td>
+          <td
+            data-testid="station-name"
+          >
+            station1
+          </td>
+          <td
+            data-testid="arrival-status"
+          />
+        </tr>
+        <tr>
+          <td
+            data-testid="station-id"
+          >
+            2
+          </td>
+          <td
+            data-testid="station-name"
+          >
+            station2
+          </td>
+          <td
+            data-testid="arrival-status"
+          />
+        </tr>
+        <tr>
+          <td
+            data-testid="station-id"
+          >
+            3
+          </td>
+          <td
+            data-testid="station-name"
+          >
+            station3
+          </td>
+          <td
+            data-testid="arrival-status"
+          />
+        </tr>
+        <tr>
+          <td
+            data-testid="station-id"
+          >
+            4
+          </td>
+          <td
+            data-testid="station-name"
+          >
+            station4
+          </td>
+          <td
+            data-testid="arrival-status"
+          />
+        </tr>
+        <tr>
+          <td
+            data-testid="station-id"
+          >
+            5
+          </td>
+          <td
+            data-testid="station-name"
+          >
+            station5
+          </td>
+          <td
+            data-testid="arrival-status"
+          />
+        </tr>
+        <tr>
+          <td
+            data-testid="station-id"
+          >
+            6
+          </td>
+          <td
+            data-testid="station-name"
+          >
+            station6
+          </td>
+          <td
+            data-testid="arrival-status"
+          />
+        </tr>
+        <tr>
+          <td
+            data-testid="station-id"
+          >
+            7
+          </td>
+          <td
+            data-testid="station-name"
+          >
+            station7
+          </td>
+          <td
+            data-testid="arrival-status"
+          />
+        </tr>
+        <tr>
+          <td
+            data-testid="station-id"
+          >
+            8
+          </td>
+          <td
+            data-testid="station-name"
+          >
+            station8
+          </td>
+          <td
+            data-testid="arrival-status"
+          />
+        </tr>
+        <tr>
+          <td
+            data-testid="station-id"
+          >
+            9
+          </td>
+          <td
+            data-testid="station-name"
+          >
+            station9
+          </td>
+          <td
+            data-testid="arrival-status"
+          />
+        </tr>
+        <tr>
+          <td
+            data-testid="station-id"
+          >
+            10
+          </td>
+          <td
+            data-testid="station-name"
+          >
+            station10
+          </td>
+          <td
+            data-testid="arrival-status"
+          />
+        </tr>
+      </tbody>
+    </table>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

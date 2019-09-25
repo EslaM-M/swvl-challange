@@ -1,0 +1,26 @@
+import React from "react";
+import { Store } from "../../../store";
+import styles from "./current-station.module.css"
+function CurrentStation() {
+  const { state } = React.useContext(Store);
+  const getStationName = () => {
+    const e = state.route.find(e => {
+      if (e.stationId === state.currentStationId) {
+        return e;
+      }
+    });
+    if (e) {
+      return `Current Station: ${e.stationName}`;
+    } else {
+      return null;
+    }
+  };
+
+  return (
+    <div className={styles.container}>
+      <h3>{getStationName()}</h3>
+    </div>
+  );
+}
+
+export default CurrentStation;

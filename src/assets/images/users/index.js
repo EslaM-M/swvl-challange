@@ -1,0 +1,25 @@
+import userImage1 from './1.jpg';
+import userImage2 from './2.jpg';
+import userImage3 from './3.jpg';
+import userImage4 from './4.jpg';
+import userImage5 from './5.jpg';
+import userImage6 from './6.jpg';
+import userImage7 from './7.jpg';
+import userImage8 from './8.jpg';
+import userImage9 from './9.jpg';
+import userImage10 from './10.jpg';
+import userImage11 from './11.jpg';
+import userImage12 from './12.jpg';
+
+export const image1 = userImage1;
+export const image2 = userImage2;
+export const image3 = userImage3;
+export const image4 = userImage4;
+export const image5 = userImage5;
+export const image6 = userImage6;
+export const image7 = userImage7;
+export const image8 = userImage8;
+export const image9 = userImage9;
+export const image10 = userImage10;
+export const image11 = userImage11;
+export const image12 = userImage12;

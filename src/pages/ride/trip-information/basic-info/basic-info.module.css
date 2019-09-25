@@ -1,0 +1,38 @@
+
+.avatar{
+    width: 60px;
+    border-radius: 50px;
+    height: 60px;
+}
+.overlabAvatar{
+    height: 60pX;
+    z-index: -1;
+    margin-left: -20px;
+}
+.userCarDetails{
+    display: flex;
+    width: 300px;
+    align-items: center;
+}
+.routeInfo{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+.leftLine{
+    height: 45px;
+    width: 5px;
+    border-radius: 10px;
+    margin: 0px 5px;
+    background-image: linear-gradient(to bottom, #d63434 , #4646c1);
+}
+.tripContent{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.distancePrice{
+    width: 300px;
+}
