@@ -41,8 +41,6 @@ export const initialState = {
 
 
 export function reducer(state, action) {
-  console.log(action.type);
-
   switch (action.type) {
     case "ADD_BOOKING":
       return AddBooking(state, action.payload);
@@ -61,7 +59,7 @@ export function reducer(state, action) {
     case "END_TRIP":
       return EndTrip(state, action.payload);
     case "LOAD_STATE":
-      return LoadState(state);
+      return LoadState(state,action.payload);
     case "REST_TRIP":
       return RestTrip(state);
     default:
