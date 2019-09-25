@@ -22,6 +22,7 @@ export const initialState = {
   tripStartTime: null,
   arrivalStatus: "",
   currentStationId: null,
+  rideDuration: 3,
   fullDistance: null,
   baseFare: {
     price: "",
@@ -38,7 +39,6 @@ export const initialState = {
     }
   }
 };
-
 
 export function reducer(state, action) {
   switch (action.type) {
@@ -59,7 +59,7 @@ export function reducer(state, action) {
     case "END_TRIP":
       return EndTrip(state, action.payload);
     case "LOAD_STATE":
-      return LoadState(state,action.payload);
+      return LoadState(state, action.payload);
     case "REST_TRIP":
       return RestTrip(state);
     default:

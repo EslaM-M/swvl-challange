@@ -16,9 +16,10 @@ export const calculateDistanceBetweenTwoPoints = (
 export const addDistanceBetweenEveryPointInPath = (
   googleMaps,
   route,
-  fullDistance
+  fullDistance,
+  rideDuration
 ) => {
-  const velocity = fullDistance / (3 * 60);
+  const velocity = fullDistance / (rideDuration * 60);
   const newPath = route.map((coordinates, i, array) => {
     if (i === 0) {
       return { ...coordinates, distance: 0, expectedTime: 0 }; // it begins here!

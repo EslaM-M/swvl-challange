@@ -18,8 +18,23 @@ function GoogleMaps(props) {
   const { state, dispatch } = React.useContext(Store);
 
   const calculateVelocity = React.useMemo(() => {
-    return state.fullDistance / (3 * 60);
-  }, [state.fullDistance]);
+    let additionlArrivalTime = 0;
+    switch (state.arrivalStatus) {
+      case "early":
+        additionlArrivalTime = -0.5;
+        break;
+      case "ontime":
+        additionlArrivalTime = 0;
+        break;
+      case "late":
+        additionlArrivalTime = 0.5;
+        break;
+      default:
+        break;
+    }
+    console.log(additionlArrivalTime);
+    return state.fullDistance / ((state.rideDuration + additionlArrivalTime) * 60);
+  }, [state.arrivalStatus]);
 
   let interval = null;
   let currentProgress = 0;
@@ -123,7 +138,8 @@ function GoogleMaps(props) {
       const newPath = addDistanceBetweenEveryPointInPath(
         window.google.maps,
         state.route,
-        fullDistance
+        fullDistance,
+        state.rideDuration
       );
       dispatch({ type: "UPDATE_ROUTE_DISTANCE", payload: newPath });
       dispatch({ type: "UPDATE_FULL_DISTANCE", payload: fullDistance });
