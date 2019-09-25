@@ -8,13 +8,14 @@ function TripInformation(props) {
   const { state, dispatch } = React.useContext(Store);
   const [showBookModal, setShowBookModal] = useState(false);
 
-  const showModal = React.useCallback(() => {
+  const showModal = () => {
+    console.log('show modal');
     if (state.tripStatus === "FINISHED") {
       dispatch({ type: "REST_TRIP" });
     } else {
       setShowBookModal(true);
     }
-  }, [state.tripStatus]);
+  }
 
   const getDateFormat = React.useMemo(() => {
     if (state.tripStartTime) {
@@ -30,12 +31,10 @@ function TripInformation(props) {
   };
 
   const isActionDisabled = React.useMemo(() => {
-    console.log("is action disabled");
     return state.bookings.length === 0 || state.tripStatus === "IN_PROGRESS";
   }, [state.bookings.length, state.tripStatus]);
 
   const getActionName = React.useMemo(() => {
-    console.log("action name");
     return state.tripStatus === "NOT_STARTED" ||
       state.tripStatus === "IN_PROGRESS"
       ? "Start Trip"

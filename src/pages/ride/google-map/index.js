@@ -20,7 +20,7 @@ function GoogleMaps(props) {
   const calculateVelocity = React.useMemo(() => {
     return state.fullDistance / (3 * 60);
   }, [state.fullDistance]);
-  
+
   let interval = null;
   let currentProgress = 0;
 
@@ -29,60 +29,68 @@ function GoogleMaps(props) {
     return differentInTime * calculateVelocity;
   };
 
-  const moveObject = () => {
+  const tripFinished = () => {
+    clearInterval(interval);
+    if (state.tripStatus === "IN_PROGRESS") {
+      dispatch({ type: "END_TRIP" });
+      props.history.push("/statistics");
+    }
+  };
+
+  const updateStation = stationId => {
+    dispatch({
+      type: "UPDATE_STATION",
+      payload: {
+        id: stationId,
+        time: (new Date() - state.tripStartTime) / 1000 // pass to secondstime :
+      }
+    });
+  };
+
+  const moveBus = () => {
     const distance = getDistance();
     if (!distance || state.tripStatus === "NOT_STARTED") {
       return;
     }
 
-    let progress = state.route.filter(
+    let arrivedStations = state.route.filter(
       coordinates => coordinates.distance < distance
     );
 
-    const nextLine = state.route.find(
+    const nextStation = state.route.find(
       coordinates => coordinates.distance > distance
     );
 
-    if (progress.length > currentProgress) {
-      dispatch({
-        type: "UPDATE_STATION",
-        payload: {
-          id: progress[progress.length - 1].stationId,
-          time: (new Date() - state.tripStartTime) / 1000 // pass to secondstime :
-        }
-      });
+    if (arrivedStations.length > currentProgress) {
+      updateStation(arrivedStations[arrivedStations.length - 1].stationId);
     }
-    if (!nextLine) {
-      clearInterval(interval);
-      if (state.tripStatus === "IN_PROGRESS") {
-        dispatch({ type: "END_TRIP" });
-        props.history.push("/statistics");
-      }
+    if (!nextStation) {
+      tripFinished();
       return;
     }
-    if (progress.length > currentProgress) {
+    if (arrivedStations.length > currentProgress) {
       clearInterval(interval);
-      currentProgress = progress.length;
+      currentProgress = arrivedStations.length;
       restartAfter();
     }
-    const lastLine = progress[progress.length - 1];
+    const lastArrivedStation = arrivedStations[arrivedStations.length - 1];
 
-    const lastLineLatLng = new window.google.maps.LatLng(
-      lastLine.lat,
-      lastLine.lng
+    const lastArrivedStationLatLng = new window.google.maps.LatLng(
+      lastArrivedStation.lat,
+      lastArrivedStation.lng
     );
 
-    const nextLineLatLng = new window.google.maps.LatLng(
-      nextLine.lat,
-      nextLine.lng
+    const nextStationLatLng = new window.google.maps.LatLng(
+      nextStation.lat,
+      nextStation.lng
     );
     // distance of this line
-    const totalDistance = nextLine.distance - lastLine.distance;
-    const percentage = (distance - lastLine.distance) / totalDistance;
+    const totalDistance = nextStation.distance - lastArrivedStation.distance;
+    const percentage = (distance - lastArrivedStation.distance) / totalDistance;
 
     const position = window.google.maps.geometry.spherical.interpolate(
-      lastLineLatLng,
-      nextLineLatLng,
+      lastArrivedStationLatLng,
+      nextStationLatLng,
       percentage
     );
 
@@ -96,12 +104,12 @@ function GoogleMaps(props) {
   };
   const restartAfter = function() {
     setTimeout(() => {
-      interval = window.setInterval(moveObject, 100);
+      interval = window.setInterval(moveBus, 100);
     }, 1000);
   };
 
   useEffect(() => {
-    interval = window.setInterval(moveObject, 100);
+    interval = window.setInterval(moveBus, 100);
   }, [state.tripStatus]);
 
   //effect run at the first time for calculate distance between each point
@@ -140,14 +148,16 @@ function GoogleMaps(props) {
             />
           );
         })}
+        {state.captainLocation.lat && (
+          <Marker
+            position={state.captainLocation}
+            icon={{
+              url: busImage,
+              scaledSize: new window.google.maps.Size(40, 40)
+            }}
+          />
+        )}
 
-        <Marker
-          position={state.captainLocation}
-          icon={{
-            url: busImage,
-            scaledSize: new window.google.maps.Size(40, 40)
-          }}
-        />
         <Polyline
           path={state.route}
           geodesic={true}

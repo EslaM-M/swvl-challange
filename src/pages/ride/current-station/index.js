@@ -1,9 +1,9 @@
 import React from "react";
 import { Store } from "../../../store";
-import styles from "./current-station.module.css"
+import styles from "./current-station.module.css";
 function CurrentStation() {
   const { state } = React.useContext(Store);
-  const getStationName = () => {
+  const getStationName = React.useMemo(() => {
     const e = state.route.find(e => {
       if (e.stationId === state.currentStationId) {
         return e;
@@ -14,11 +14,11 @@ function CurrentStation() {
     } else {
       return null;
     }
-  };
+  }, [state.currentStationId]);
 
   return (
     <div className={styles.container}>
-      <h3>{getStationName()}</h3>
+      <h3>{getStationName}</h3>
     </div>
   );
 }
