@@ -3,14 +3,15 @@ information about the customers, captain, price and etc.. given that the user ca
 actions as well.
 
 And this is online Link to show it as a live demo: https://swvl-challange.eslamfcih.now.sh/
-
+![alt text](https://github.com/EslaM-M/swvl-challange/blob/master/captured.gif)
 
 ## Additional Libraries
 
-1- React Testing Library
-2- React Chartjs-2
-3- React Google Maps
-4- React Bootstrap(Most popular and familiar with it)
+1- React Testing Library<br>
+2- React Chartjs-2<br>
+3- React Google Maps<br>
+4- React Bootstrap(Most popular and familiar with it)<br>
+
 ## Available Scripts
 
 In the project directory, you can run:
