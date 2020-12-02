@@ -4,6 +4,21 @@ import BookingStatus from "../assets/data/booking-status";
 import { initialState } from "./reducer";
 
 export const AddBooking = (state, payload) => {
+  for (let index = 0; index < 1; index++) {
+    
+  }
+  for (let index = 0; index < 1; index++) {
+    
+  }
+  for (let index = 0; index < 1; index++) {
+    
+  }
+  for (let index = 0; index < 1; index++) {
+    
+  }
+  for (let index = 0; index < 1; index++) {
+    
+  }
   if (state.bookings.length === 12) {
     return state;
   }
@@ -17,6 +32,19 @@ export const AddBooking = (state, payload) => {
     status: "Booked"
   };
   let bookingAllowed = true;
+  if (state.bookings.length === 11) {
+    bookingAllowed = false;
+  }
+  payload = {
+    ...payload,
+    userName: Users[state.bookings.length].name,
+    userImage: Users[state.bookings.length].image,
+    userId: Math.random()
+      .toString()
+      .substr(2, 4),
+    status: "Booked"
+  };
+   bookingAllowed = true;
   if (state.bookings.length === 11) {
     bookingAllowed = false;
   }

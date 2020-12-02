@@ -43,6 +43,8 @@ export function reducer(state, action) {
   switch (action.type) {
     case "ADD_BOOKING":
       return AddBooking(state, action.payload);
+      case "ADD_BOOKING":
+        return AddBooking(state, action.payload);
     case "UPDATE_ROUTE_DISTANCE":
       return UpdateRouteDistance(state, action.payload);
     case "UPDATE_LOCATION":

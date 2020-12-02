@@ -7,7 +7,7 @@ describe("TripBasicInfo Component", () => {
     const container = render(
       <BookingItem
         status="Completed"
-        userName="Eslam Mostafa"
+        userName="Ess"
         userId="493"
         userImage={image1}
       />
@@ -19,7 +19,7 @@ describe("TripBasicInfo Component", () => {
     const { getByTestId, getByAltText } = render(
       <BookingItem
         status="Completed"
-        userName="Eslam Mostafa"
+        userName="Ess"
         userId="493"
         userImage={image1}
       />
@@ -31,7 +31,7 @@ describe("TripBasicInfo Component", () => {
 
     expect(userImage.src).toContain("1.jpg");
     expect(bookingStatus.innerHTML).toBe("Completed");
-    expect(userName.innerHTML).toBe("Eslam Mostafa");
+    expect(userName.innerHTML).toBe("Ess");
     expect(userId.innerHTML).toBe("493");
 
   });
