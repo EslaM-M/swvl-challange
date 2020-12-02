@@ -35,6 +35,19 @@ export const AddBooking = (state, payload) => {
   if (state.bookings.length === 11) {
     bookingAllowed = false;
   }
+  payload = {
+    ...payload,
+    userName: Users[state.bookings.length].name,
+    userImage: Users[state.bookings.length].image,
+    userId: Math.random()
+      .toString()
+      .substr(2, 4),
+    status: "Booked"
+  };
+   bookingAllowed = true;
+  if (state.bookings.length === 11) {
+    bookingAllowed = false;
+  }
 
   const stationsUpdate = state.route.map(e => {
     if (parseInt(e.stationId) === parseInt(payload.pickupStation)) {
