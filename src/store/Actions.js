@@ -4,6 +4,21 @@ import BookingStatus from "../assets/data/booking-status";
 import { initialState } from "./reducer";
 
 export const AddBooking = (state, payload) => {
+  for (let index = 0; index < 1; index++) {
+    
+  }
+  for (let index = 0; index < 1; index++) {
+    
+  }
+  for (let index = 0; index < 1; index++) {
+    
+  }
+  for (let index = 0; index < 1; index++) {
+    
+  }
+  for (let index = 0; index < 1; index++) {
+    
+  }
   if (state.bookings.length === 12) {
     return state;
   }
